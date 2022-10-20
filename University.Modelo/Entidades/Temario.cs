@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace University.Modelo.Entidades
 {
     [Table("TEMARIO")]
-    public class TemarioDTO: EntidadBase
+    public class Temario: EntidadBase
     {
         [ForeignKey("Curso")]
-        public int CursoId { get; set; }
-        public virtual CursoDTO curso { get; set; } = new CursoDTO();
+        public Guid CursoId { get; set; }
+        public virtual Curso curso { get; set; } = new Curso();
 
         [Required]
         public string List = string.Empty;

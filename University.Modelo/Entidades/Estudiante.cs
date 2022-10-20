@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace University.Modelo.Entidades
 {
     [Table("ESTUDIANTE")]
-    public class EstudianteDTO : EntidadBase
+    public class Estudiante : EntidadBase
     {
         [Column("NOMBRE"), Required, StringLength(50)]
         public string nombre { get; set; } = string.Empty;
@@ -20,6 +20,6 @@ namespace University.Modelo.Entidades
         [Column("FECHA_NACIMIENTO"), Required, StringLength(50)]
         public DateTime fechaNacimiento { get; set; }
 
-        public ICollection<CursoDTO> cursos { get; set; } = new List<CursoDTO>();
+        public ICollection<Curso> cursos { get; set; } = new List<Curso>();
     }
 }

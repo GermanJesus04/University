@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace University.Modelo.Entidades
 {
     [Table("CATEGORIA")]
-    public class CategoriaDTO: EntidadBase
+    public class Categoria: EntidadBase
     {
         [Column("NOMBRE"), Required, StringLength(50)]
         public string nombre { get; set; } = string.Empty;
-        public ICollection<CursoDTO> cursos { get; set; } = new List<CursoDTO>();
+        public ICollection<Curso> cursos { get; set; } = new List<Curso>();
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace University.Modelo.Entidades
 {
     [Table("USUARIO")]
-    public class UsuarioDTO : EntidadBase
+    public class Usuario : EntidadBase
     {
         [Column("NOMBRE_USUARIO"), Required, StringLength(50)]
         public string nombreUsuario { get; set; } = string.Empty;

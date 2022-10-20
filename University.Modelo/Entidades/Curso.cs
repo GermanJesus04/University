@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace University.Modelo.Entidades
 {
     [Table("CURSO")]
-    public class CursoDTO : EntidadBase
+    public class Curso : EntidadBase
     {
         [Column("NOMBRE"), Required, StringLength(50)]
         public string nombre { get; set; } = string.Empty;
@@ -23,11 +23,11 @@ namespace University.Modelo.Entidades
         [Column("NIVEL"), Required, StringLength(15)]
         public Nivel nivel { get; set; } = Nivel.Basico;
 
-        public ICollection<CategoriaDTO> categorias { get; set; } = new List<CategoriaDTO>();
+        public ICollection<Categoria> categorias { get; set; } = new List<Categoria>();
 
          
-        public TemarioDTO temario { get; set; } = new TemarioDTO();
+        public Temario temario { get; set; } = new Temario();
          
-        public ICollection<EstudianteDTO> estudiantes { get; set; } = new List<EstudianteDTO>();
+        public ICollection<Estudiante> estudiantes { get; set; } = new List<Estudiante>();
     }
 }
